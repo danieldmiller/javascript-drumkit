@@ -12,7 +12,7 @@ class Keys {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  var kit = document.querySelectorAll("li");
+  let kit = document.querySelectorAll("li");
 
   kit.forEach(function(elem) {
     elem.addEventListener("click", function() {
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   })
 
   window.onkeydown = function(e) {
-   var key = e.keyCode ? e.keyCode : e.which;
+   let key = e.keyCode ? e.keyCode : e.which;
    let keyList = new Keys();
 
    if (key == keyList.a) {
@@ -42,10 +42,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function playInstrument(key, file) {
   if(typeof file === 'string') {
-    var audio = new Audio(file);
+    let audio = new Audio(file);
     audio.play();
 
-    var instrument;
+    let instrument;
     if(key === "a") {
       instrument = document.querySelector("#a");
     } else if(key === "s") {
